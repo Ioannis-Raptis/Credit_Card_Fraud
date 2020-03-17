@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # PART 1: Pre-processing
-# Split the dataset to depended and independent variables
+# Split the dataset to dependent and independent variables
 dataset = pd.read_csv("creditcard.csv")
 X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
@@ -14,7 +14,7 @@ total_obs = y.shape[0]
 fraud = [i for i in y if i == 1]
 count_fraud = fraud.count(1)
 
-# Calculate the percentage of non fraud observations in the dataset
+# Calculate the percentage of fraud observations in the dataset
 percentage = (float(count_fraud)/float(total_obs)) * 100
 
 # Feature Min-Max Scaling, neural networks work much better with small input values
