@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 # PART 1: Pre-processing
 # Split the dataset to depended and independent variables
 dataset = pd.read_csv("creditcard.csv")
