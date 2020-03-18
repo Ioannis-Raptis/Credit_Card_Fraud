@@ -106,14 +106,14 @@ probs = classifier.predict(X_test)
 from sklearn.metrics import roc_auc_score
 print(f'AUC score = {roc_auc_score(y_test, probs)}')
 
-### Calculate average precision
+# Calculate average precision
 from sklearn.metrics import average_precision_score, precision_recall_curve
 average_precision = average_precision_score(y_test, probs)
 
-### Obtain precision and recall 
+# Obtain precision and recall 
 precision, recall, _ = precision_recall_curve(y_test, probs)
 
-### Plot the recall precision tradeoff
+# Plot the recall precision tradeoff
 plt.plot(precision, recall)
 plt.xlabel('Precision')
 plt.ylabel('Recall')
